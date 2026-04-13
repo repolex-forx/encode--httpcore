@@ -1,0 +1,28 @@
+[2026-04-13T22:01:36Z] === ENRICH ITERATION 1 START | repo=encode/httpcore sha=98209758 ===
+[2026-04-13T22:01:36Z] [iter=1] PHASE START: enrich repo=encode/httpcore sha=98209758 runlog=/home/runner/work/forx/forx/storage/aggregate/lsp/logs/98209758-enrich-iter-001.log output=/home/runner/work/forx/forx/storage/aggregate/lsp/98209758cc14e1a5f966fe1dfdc1064b94055d8c.nq.gz
+[2026-04-13T22:02:02Z] [iter=1] Step 1: Loading AST into disk-backed store mem_mb=77 MB
+[2026-04-13T22:02:06Z] [iter=1] AST store loaded triples=461032 load_secs=3 mem_mb=748 MB
+[2026-04-13T22:02:06Z] [iter=1] Step 2: Finding LSP targets mem_mb=748 MB
+[2026-04-13T22:02:07Z] [iter=1] LSP targets found call_sites=2801 imports=200 extends=67 implements=0 secs=1
+[2026-04-13T22:02:07Z] [iter=1] Step 2.7: Building position index (one-shot, shared across resolvers) mem_mb=748 MB
+[2026-04-13T22:02:10Z] [iter=1] Position index built positions=31122 nodes_with_types=39710 secs=2 mem_mb=748 MB
+[2026-04-13T22:02:10Z] [iter=1] Step 3: Starting LSP resolution mem_mb=748 MB already_completed_types=[] already_completed_files=0
+[2026-04-13T22:02:10Z] [iter=1] Resolving target type target_type=call_site count=2801
+[2026-04-13T22:02:10Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=0.6 files_done=0 resolved=0 errors=0 current=tests/_async/test_http2.py
+[2026-04-13T22:02:43Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=1.1 files_done=3 resolved=45 errors=185 current=tests/_sync/test_socks_proxy.py
+[2026-04-13T22:03:17Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=1.7 files_done=7 resolved=86 errors=381 current=tests/_async/test_http11.py
+[2026-04-13T22:03:58Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=2.4 files_done=11 resolved=151 errors=622 current=httpcore/_sync/socks_proxy.py
+[2026-04-13T22:04:28Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=2.9 files_done=14 resolved=181 errors=800 current=tests/_sync/test_http11.py
+[2026-04-13T22:05:09Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=3.6 files_done=17 resolved=218 errors=1037 current=httpcore/_async/socks_proxy.py
+[2026-04-13T22:05:41Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=4.1 files_done=21 resolved=302 errors=1217 current=httpcore/_sync/http_proxy.py
+[2026-04-13T22:06:14Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=4.6 files_done=26 resolved=364 errors=1411 current=tests/_async/test_socks_proxy.py
+[2026-04-13T22:06:46Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=5.2 files_done=31 resolved=396 errors=1600 current=httpcore/_sync/http11.py
+[2026-04-13T22:07:17Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=5.7 files_done=35 resolved=479 errors=1785 current=httpcore/_trace.py
+[2026-04-13T22:07:33Z] [iter=1] Target type resolved target_type=call_site resolved=533 errors=1871 secs=323 mem_mb=748 MB
+[2026-04-13T22:07:33Z] [iter=1] Resolving target type target_type=import_statement count=200
+[2026-04-13T22:07:35Z] [iter=1] Target type resolved target_type=import_statement resolved=149 errors=0 secs=2 mem_mb=748 MB
+[2026-04-13T22:07:35Z] [iter=1] Resolving target type target_type=extends_clause count=67
+[2026-04-13T22:07:37Z] [iter=1] Target type resolved target_type=extends_clause resolved=67 errors=0 secs=2 mem_mb=748 MB
+[2026-04-13T22:07:40Z] [iter=1] Step 5: Writing final enrichment file triples=25965
+[2026-04-13T22:07:40Z] [iter=1] Enrichment file written path=/home/runner/work/forx/forx/storage/aggregate/lsp/98209758cc14e1a5f966fe1dfdc1064b94055d8c.nq.gz size_kb=489
+[2026-04-13T22:07:40Z] [iter=1] PHASE END: enrich elapsed_s=365 elapsed_min=6.1 total_triples=25965
